@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interviewer Web</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="Images/logo2.png" alt="MyOnlineMeal.com">
+            </div>
+            <ul>
+                <li class="items">
+                    <a href="#">Speech</a>
+                </li>
+                <li class="items">
+                    <a href="#">Vocabulary</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="body">
+            <div id="chatContainer">
+                <div id="messageContainer">
+                    <!-- Messages will be appended here --></div>
+                <div id="inputContainer">
+                    <!-- <h1>Voice to Text Converter</h1> -->
+                    <input type="text" id="convert_text" placeholder="Speak Something!">
+                    <button id="click_to_record">Voice To Text</button>
+                    <button id="sendMessageBtn">Send</button>
+                    <button onclick="start()">Start</button>
+                    <!-- <button id="refresh">Refresh</button> -->
+                    <!-- <button id="continue">Continue</button> -->
+                    <button id="feedback">Ask Feedback</button>
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>

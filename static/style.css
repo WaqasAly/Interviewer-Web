@@ -1,0 +1,182 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+  margin: 10px 34px;
+}
+
+#logo img {
+  height: 63px;
+  margin: 5px -10px;
+}
+
+/* Navbar Designing */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+
+#navbar ul{
+  display: flex;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li {
+  /* display: block; */
+  list-style: none;
+  font-size: 1.4rem;
+  padding: 29px 5px;
+}
+
+#navbar ul li a {
+  color: black;
+  border-radius: 20px;
+  display: block;
+  text-decoration: none;
+  padding: 0px 16px;
+}
+
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+  /* border: 2px solid black; */
+}
+
+#navbar::before {
+  content: "";
+  /* background-color: black; */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	background:linear-gradient(to right bottom, #fff, #03920f);
+	color: #000;
+	
+	/* display: flex;
+  align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.body{
+  	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voice_to_text{
+  width: 600px;
+  text-align: center;
+}
+h1{
+	color: #fff;
+	font-size: 50px;
+}
+#convert_text{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+button{
+	padding: 12px 20px;
+  background: #0ea4da;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#messageContainer {
+  height: 150px; /* Set the desired height */
+  width: 950px; /* Set the desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 05px;
+}
+
+#messageContainer p {
+  margin: 5px 0;
+}
+
+#messageContainer::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+#messageContainer::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+}
+
+#messageContainer::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Color of the scrollbar track */
+}
+
+/* Add the following CSS to center the container */
+#centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.select-style {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  width: 200px;
+}
+
+#proceedBtn {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Optional: Style the dropdown arrow */
+.select-style::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interviewer Web</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="Images/logo2.png" alt="MyOnlineMeal.com">
+            </div>
+            <ul>
+                <li class="items">
+                    <a href="#">Speech</a>
+                </li>
+                <li class="items">
+                    <a href="#">Vocabulary</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="body">
+            <div id="centerContainer">
+                <select name="scenario" id="scenario" class="select-style">
+                    <option value="acc-info">Account Information</option>
+                    <option value="rec-trans">Recent Transaction</option>
+                </select>
+                <button id="proceedBtn" onclick="proceed()">Proceed</button>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
