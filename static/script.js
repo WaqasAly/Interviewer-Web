@@ -7,6 +7,7 @@ const sendMessageBtn = document.getElementById('sendMessageBtn');
 // const continueBtn = document.getElementById('continue');
 const feedbackBtn = document.getElementById('feedback');
 let welcomeMessage = 'Assume you are a customer of an insurance company calling their contact center! Ask me a question about the status of your own payment. Only ask question, nothing else. Do not ask to assist me, you are the customer';
+let wdStatusMsg = 'Assume you are a customer of an insurance company calling their contact center! Ask me a question about the status of your accounts withdrawl status. Only ask question, nothing else. Do not ask to assist me, you are the customer';
 
 // Add event listeners
 clickToRecord.addEventListener('click', startSpeechRecognition);
@@ -190,6 +191,25 @@ function start() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ prompt: welcomeMessage })
+    })
+        .then(response => response.json())
+        .then(data => {
+            const aiResponse = data.reply; // Get the AI response from the server
+            addMessage('system', aiResponse);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Handle error if needed
+        });
+}
+
+function wdStatus() {
+    fetch('/chat', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ prompt: wdStatusMsg })
     })
         .then(response => response.json())
         .then(data => {
