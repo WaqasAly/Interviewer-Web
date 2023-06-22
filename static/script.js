@@ -141,7 +141,7 @@ function addFeedbackMessage() {
     catch(err){
         console.log("error: ", err);
     }
-    addMessage('user', feedbackMsg);
+    // addMessage('user', feedbackMsg);
     // addMessage('user', continueMessage);
     // Replace this with your actual API call to ChatGPT
     fetch('/chat', {
