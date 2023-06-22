@@ -24,7 +24,7 @@ app.post('/chat', (req, res) => {
   if (prompt.toLowerCase() === 'refresh') {
     // Clear conversation memory
     messages.length = 0;
-    messages.push({ role: 'system', content: 'Assume you are a customer of an insurance company calling their contact center! Ask me a question about the status of your own payment. Only ask question, nothing else. Do not ask to assist me, you are the customer' });
+    messages.push({ role: 'system', content: 'Assume you are a customer of an insurance company calling their contact center. Ask me a question about the status of your own payment. Only ask question, nothing else. Do not ask to assist me, you are the customer' });
     return res.json({ reply: 'Chat has been refreshed.' });
   }
 
